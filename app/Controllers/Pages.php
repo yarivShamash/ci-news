@@ -6,16 +6,7 @@ Class Pages extends Controller
 {
   public function index()
   {
-    $model = new NewsModel();
-    
-    $data = [
-      'news' => $model.getNews(),
-      'title' => 'News archive',
-    ];
-
-    echo view('templates/header', $data);
-    echo view('templates/overview', $data);
-    echo view('templates/footer', $data);
+    // return view('welcome_message');
   }
 
   public function view ($page = 'home')

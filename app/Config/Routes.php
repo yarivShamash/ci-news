@@ -30,9 +30,14 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('(:any)', 'Pages::view/$1'); 
+$routes->get('news/(:segment)', 'News::view/$1');
+$routes->get('news', 'News::index');
+$routes->get('news', 'Pages::view/$1');
+
 /*
+Abandoned:
+// $routes->get('/', 'Home::index');
+// $routes->get('(:any)', 'Pages::view/$1'); 
 The above rule enables us to navigate to: localhost:8080/home
 istead of: localhost:8080/pages/view/home
 "...any request using the wildcard string (:any). and passes the parameter to the view() method of the Pages class."

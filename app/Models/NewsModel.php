@@ -14,7 +14,7 @@ class NewsModel extends Model
       return $this -> findAll();
     };
 
-    return $this->asArry()
+    return $this->asArray()
                 ->where(['slug' => $slug])
                 ->first();
   } // when calling getNews() we will get all news, when passing an argument we get news by thier slug
