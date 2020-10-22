@@ -11,6 +11,7 @@
     </div>
 
     <p><a href="/news/<?= esc(str_replace(' ', '-', strtolower($news_item['title'])), 'url'); ?>">View article</a></p>
+    <!-- url_title($news_item['title]) should make it lower case and replace spaces with dashes as well -->
   
   <?php endforeach; ?>
 
