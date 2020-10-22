@@ -37,6 +37,7 @@ The above rule enables us to navigate to: localhost:8080/home
 istead of: localhost:8080/pages/view/home
 "...any request using the wildcard string (:any). and passes the parameter to the view() method of the Pages class."
 from (https://codeigniter.com/user_guide/tutorial/static_pages.html)
+
 */ 
 
 /**

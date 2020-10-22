@@ -6,7 +6,16 @@ Class Pages extends Controller
 {
   public function index()
   {
-    return view('welcome_message');
+    $model = new NewsModel();
+    
+    $data = [
+      'news' => $model.getNews(),
+      'title' => 'News archive',
+    ];
+
+    echo view('templates/header', $data);
+    echo view('templates/overview', $data);
+    echo view('templates/footer', $data);
   }
 
   public function view ($page = 'home')
