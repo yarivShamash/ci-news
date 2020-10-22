@@ -10,7 +10,7 @@
       <?= esc($news_item['body']); ?>
     </div>
 
-    <p><a href="/news/<?= esc($news_item['title'], 'url'); ?>">View article</a></p>
+    <p><a href="/news/<?= esc(str_replace(' ', '-', strtolower($news_item['title'])), 'url'); ?>">View article</a></p>
   
   <?php endforeach; ?>
 

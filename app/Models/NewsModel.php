@@ -4,16 +4,17 @@ use CodeIgniter\Model;
 
 class NewsModel extends Model
 {
-  // By extending CI's Model we can access the database using $this->db
   protected $table = 'news';
 
   public function getNews($slug = false)
   {
     if ($slug === false)
     {
+      echo 'getNews slug is false <br/>';
       return $this -> findAll();
     };
 
+    echo 'getNews() slug is '.$slug. '<br/>';
     return $this->asArray()
                 ->where(['slug' => $slug])
                 ->first();

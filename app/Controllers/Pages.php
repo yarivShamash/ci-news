@@ -18,9 +18,10 @@ Class Pages extends Controller
     }
 
     $data['title'] = ucfirst($page); //capitalize the first letter
+    
 
-    echo view('templates/header', $data); // echo the header template and pass $data as an argument to esc($title) in header.php
+    echo view('templates/header', $data); // echo the header view and pass $data as an argument to esc($title) in header.php
     echo view('pages/'.$page, $data); // echo the content of the page
-    echo view('templates/footer', $data); // echo the footer template
+    echo view('templates/footer', $data); // echo the footer view
   }
 }

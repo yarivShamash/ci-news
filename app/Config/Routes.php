@@ -32,7 +32,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('news/(:segment)', 'News::view/$1');
 $routes->get('news', 'News::index');
-$routes->get('news', 'Pages::view/$1');
+$routes->get('(:any)', 'Pages::view/$1');
 
 /*
 Abandoned:

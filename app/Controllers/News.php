@@ -15,6 +15,8 @@ class News extends Controller
       'title' => 'News archive',
     ];
     
+echo 'index() $data: ' . json_encode($data) . '<br />';
+
      echo view('templates/header', $data);
      echo view('news/overview', $data);
      echo view('templates/footer', $data);
@@ -30,6 +32,9 @@ class News extends Controller
       {
         throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the news item: '. $slug);
       }
+    
+echo 'view() $data: ' . json_encode($data) . '<br />';
+echo 'view() $slug: ' . $slug . '<br />';
 
       $data['title'] = $data['news']['title'];
 
