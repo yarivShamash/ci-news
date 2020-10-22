@@ -10,11 +10,11 @@ class NewsModel extends Model
   {
     if ($slug === false)
     {
-      echo 'getNews slug is false <br/>';
+      // echo 'getNews slug is false <br/>'; //FOR DEBUG
       return $this -> findAll();
     };
 
-    echo 'getNews() slug is '.$slug. '<br/>';
+    // echo 'getNews() slug is '.$slug. '<br/>'; //FOR DEBUG
     return $this->asArray()
                 ->where(['slug' => $slug])
                 ->first();
